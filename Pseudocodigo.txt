@@ -1,0 +1,31 @@
+Iniciar programa
+    Mostrar "Ingresar n:"
+    Leer n desde el teclado
+    t8 = n
+    t0 = 0
+    t1 = 1
+
+    Mostrar "La serie Fibonacci de "
+    Mostrar n
+    Mostrar " términos es: "
+    Mostrar 1
+    Mostrar ", "
+
+    Si n == 0 o n < 0:
+        Ir a Fin
+
+    Loop:
+        t2 = t0 + t1  # Calcula el siguiente término de Fibonacci
+        Mostrar t2
+        Si t4 == n:  # Si hemos alcanzado n términos
+            Ir a Fin
+
+        Mostrar ", "
+        t4 = t4 + 1
+        t0 = t1
+        t1 = t2
+        Ir a Loop
+
+    Fin:
+        Mostrar una nueva línea
+    Fin del programa

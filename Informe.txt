@@ -1,0 +1,26 @@
+Este es un resumen de las observaciones y descripciones clave del programa `Fibonacci.asm`:
+
+1. Punto de Entrada y Etiquetas Globales:
+- El programa tiene un punto de entrada definido como `__start` y está etiquetado como global usando `.globl __start`. Esto indica que este es el punto desde el cual comienza la ejecución del programa.
+
+2.Entrada de Usuario:
+- Se utiliza `la` para cargar la dirección de la cadena `"Ingresar n:"` en el registro `$a0`, y luego se utiliza `li` y `syscall` para imprimir esta cadena y solicitar al usuario que ingrese un número entero.
+- Luego, se utiliza nuevamente `li` y `syscall` para leer el valor ingresado por el usuario y almacenarlo en el registro `$t8`.
+
+3. Inicialización de Variables:
+- Los registros `$t0` y `$t1` se inicializan a `0` y `1`, respectivamente, para representar los primeros dos términos de la serie de Fibonacci.
+
+4. Impresión de Mensajes:
+- Se utilizan instrucciones `la`, `li`, y `syscall` para imprimir las cadenas `"La serie Fibonacci de "` y `" terminos es: "`, así como el valor `1` y una coma.
+
+5. Cálculo y Visualización de la Serie de Fibonacci:
+  - El programa entra en un bucle `loop` donde calcula y muestra los términos sucesivos de la serie de Fibonacci hasta alcanzar el valor ingresado por el usuario.
+  - Se utiliza una serie de instrucciones para realizar los cálculos y las impresiones necesarias dentro del bucle.
+  - El bucle verifica si se ha alcanzado el valor ingresado (`$t8`) y, si es así, sale del bucle.
+
+6. Finalización del Programa:
+   - El programa utiliza instrucciones para imprimir una nueva línea (`"\n"`) y luego finaliza con `li $v0, 10` y `syscall`.
+
+7. Sección de Datos en Memoria:
+  - La sección `.data` contiene las cadenas de caracteres que se utilizan en el programa, como `"Ingresar n:"`, `"La serie Fibonacci de "`, `" terminos es: "`, `", "`, y `"\n"`.
+
